@@ -950,6 +950,7 @@ blockquote {
 
 .contact-right.bg_white {
   background-color: #fff;
+  padding: 40px;
 }
 
 .success-message {
@@ -3052,13 +3053,12 @@ blockquote {
 }
 
 .contact-form-embed {
-  margin-top: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 .contact-form-title {
-  padding-top: 32px;
-  padding-left: 60px;
-  padding-right: 60px;
+  text-align: center;
 }
 
 @media screen and (max-width: 991px) {
@@ -3957,6 +3957,10 @@ blockquote {
   .active-filter-2 {
     padding: 2px 5px;
     font-size: 14px;
+  }
+
+  .contact-form-title {
+    text-align: left;
   }
 }
 
