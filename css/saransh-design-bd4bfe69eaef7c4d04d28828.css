@@ -948,6 +948,10 @@ blockquote {
   max-width: 65%;
 }
 
+.contact-right.bg_white {
+  background-color: #fff;
+}
+
 .success-message {
   color: #fff;
   text-align: center;
@@ -1234,13 +1238,14 @@ blockquote {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  max-width: 14%;
+  max-width: 15%;
   display: flex;
 }
 
 .divider {
   background-color: #000;
   width: 10px;
+  min-width: .625rem;
   height: 1px;
 }
 
@@ -1362,7 +1367,7 @@ blockquote {
 
 .service-info {
   background-color: #0000;
-  display: block;
+  display: none;
   position: relative;
   overflow: hidden;
 }
@@ -3044,6 +3049,16 @@ blockquote {
 
 .button-3:hover {
   background-color: #333;
+}
+
+.contact-form-embed {
+  margin-top: 0;
+}
+
+.contact-form-title {
+  padding-top: 32px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 @media screen and (max-width: 991px) {

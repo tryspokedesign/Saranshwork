@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Dec 17 2025 06:00:08 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed Dec 24 2025 12:13:49 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6940e3b1aec8c2a027c37eab" data-wf-site="6940e3b1aec8c2a027c37ebc" lang="en">
 <head>
   <meta charset="utf-8">
@@ -517,7 +517,7 @@ buttons.forEach(button => {
     $(this).find('.image-name-text').html(textBeforeHyphen);
   });
 </script>
-  <script>
+  <!-- script>
 //Make FAQ dropdown open/close smoolty
   $(function () {
     var Accordion = function (el, multiple) {
@@ -542,6 +542,32 @@ buttons.forEach(button => {
   });
 $( document ).ready(function() {
 	$('.service-block:first-child .service-head').click()
+});
+</script -->
+  <script>
+$(function () {
+  var Accordion = function (el, multiple) {
+    this.el = el || {};
+    this.multiple = multiple || false;
+    var links = this.el.find('.service-head');
+    links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown);
+  };
+  Accordion.prototype.dropdown = function (e) {
+    var $el = e.data.el;
+    var $this = $(this);
+    var $next = $this.next();
+    $next.slideToggle();
+    $this.parent().toggleClass('open');
+    if (!e.data.multiple) {
+      $el
+        .find('.service-info')
+        .not($next)
+        .slideUp()
+        .parent()
+        .removeClass('open');
+    }
+  };
+  new Accordion($('#accordion-two'), false);
 });
 </script>
 </body>
